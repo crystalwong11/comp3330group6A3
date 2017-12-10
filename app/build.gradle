@@ -1,5 +1,16 @@
 apply plugin: 'com.android.application'
 
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral() // or jcenter()
+        maven { url "https://maven.google.com" }
+    }
+    dependencies {
+        classpath 'com.google.gms:google-services:3.1.1'
+    }
+}
+
 android {
     compileSdkVersion 27
     defaultConfig {
@@ -17,7 +28,6 @@ android {
         }
     }
 }
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:27.0.2'
@@ -34,7 +44,16 @@ dependencies {
     //compile 'com.firebaseui:firebase-ui:0.6.0'
     //compile 'com.firebaseui:firebase-ui-storage:3.1.0'
     compile 'com.firebaseui:firebase-ui-storage:0.6.0'
+    compile 'com.google.firebase:firebase-database:11.6.2'
 }
 
-
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+    }
+}
 apply plugin: 'com.google.gms.google-services'

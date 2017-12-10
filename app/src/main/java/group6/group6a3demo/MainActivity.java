@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
         btnDB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent();
-                //startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(),Database.class);
+                startActivity(intent);
             }
         });
 

@@ -17,6 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".CloudStorage"></activity>
+        <activity android:name=".Database"></activity>
+
     </application>
 
     <meta-data android:name="my.app.namespace.utils.MyAppGlideModule"
